@@ -1539,36 +1539,25 @@ function handlePedagogicalRuleEngine(req: AIReadRequest): AIReadResponse {
   // 3. Check answer when student selects/submits an option
   if (action === 'check_answer' && currentQuestion && selectedOptionKey) {
     const isCorrect = selectedOptionKey === currentQuestion.correctKey;
-    const hint1Text = currentQuestion.hint1 || currentQuestion.hint;
-    const hint2Text = currentQuestion.hint2 || currentQuestion.hint;
 
     if (isCorrect) {
       return {
         isCorrect: true,
-        message: `Good job! Your answer matches the information in paragraph ${currentQuestion.targetParagraph}. 👏`,
+        message: `Hebat sekali! Jawabanmu BENAR! 👏 Alasan: ${currentQuestion.reasoning || `Sesuai dengan informasi dalam paragraf ${currentQuestion.targetParagraph}.`}`,
         askForEvidence: true,
         evidenceSentence: currentQuestion.correctEvidenceSentence,
         suggestedParagraph: currentQuestion.targetParagraph,
         allowRetry: false,
       };
     } else {
-      if (attemptNumber === 1) {
-        return {
-          isCorrect: false,
-          message: `Try again. Look at paragraph ${currentQuestion.targetParagraph} and find the clue mentioned by the writer: "${hint1Text}"`,
-          hintLevel: 1,
-          suggestedParagraph: currentQuestion.targetParagraph,
-          allowRetry: true,
-        };
-      } else {
-        return {
-          isCorrect: false,
-          message: `Good try! Take another close look at paragraph ${currentQuestion.targetParagraph}. Remember: ${hint2Text} Think about which part supports your answer.`,
-          hintLevel: 2,
-          suggestedParagraph: currentQuestion.targetParagraph,
-          allowRetry: true,
-        };
-      }
+      return {
+        isCorrect: false,
+        message: `Pilihanmu belum tepat, tapi tidak apa-apa! Kunci jawaban yang tepat adalah [${currentQuestion.correctKey}]. Alasan: ${currentQuestion.reasoning || `Perhatikan kalimat bukti dalam paragraf ${currentQuestion.targetParagraph}.`}`,
+        hintLevel: 1,
+        suggestedParagraph: currentQuestion.targetParagraph,
+        evidenceSentence: currentQuestion.correctEvidenceSentence,
+        allowRetry: false,
+      };
     }
   }
 

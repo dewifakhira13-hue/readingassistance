@@ -21,6 +21,7 @@ export interface Grade5Question {
   hint1?: string;
   hint2?: string;
   correctEvidenceSentence: string;
+  reasoning?: string;
 }
 
 export interface TreatmentSession {
@@ -1020,6 +1021,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 1,
       hint: 'Think about what the whole passage is mostly about: how students care for and learn from the garden.',
       correctEvidenceSentence: 'Students and teachers work together to take care of it... Students also learn about plants and nature there.',
+      reasoning: 'Teks secara keseluruhan menceritakan bagaimana siswa dan guru bekerja sama merawat kebun sekolah serta belajar tentang tanaman dan alam di sana (Pilihan B). Pilihan A, C, dan D bukan ide pokok keseluruhan teks.',
     },
     {
       id: 'pre-q2',
@@ -1036,6 +1038,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 1,
       hint: 'Look at what the entire story introduces and describes: the school garden and activities students do there.',
       correctEvidenceSentence: 'Our school has a small garden behind the library... The garden is not only beautiful. Students also learn about plants and nature there.',
+      reasoning: 'Teks ini berfokus pada kebun sekolah dan aneka kegiatan positif yang dilakukan di dalamnya (Pilihan A), bukan sekadar ruang kelas, jenis sayuran, atau kegiatan memasak saja.',
     },
     {
       id: 'pre-q3',
@@ -1052,6 +1055,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Read the second paragraph to find what benefit students gain from the garden.',
       correctEvidenceSentence: 'Students also learn about plants and nature there.',
+      reasoning: 'Paragraf 2 menyatakan dengan jelas bahwa kebun bermanfaat karena membantu siswa belajar tentang tanaman dan alam: "Students also learn about plants and nature there" (Pilihan B).',
     },
     {
       id: 'pre-q4',
@@ -1068,6 +1072,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Choose the option that describes both learning about nature and using garden vegetables in school activities.',
       correctEvidenceSentence: 'Students also learn about plants and nature there. The vegetables from the garden are sometimes used in the school cooking activity.',
+      reasoning: 'Kalimat yang paling tepat menggambarkan seluruh teks adalah kebun sekolah dimanfaatkan untuk belajar sains dan berbagai aktivitas sekolah seperti kegiatan memasak (Pilihan B).',
     },
     // Specific Information (5-10)
     {
@@ -1085,6 +1090,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 1,
       hint: 'Look at the first sentence of paragraph 1 to find the location.',
       correctEvidenceSentence: 'Our school has a small garden behind the library.',
+      reasoning: 'Di awal teks disebutkan secara spesifik bahwa kebun sekolah terletak persis di belakang perpustakaan: "Our school has a small garden behind the library" (Pilihan B).',
     },
     {
       id: 'pre-q6',
@@ -1101,6 +1107,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 1,
       hint: 'Look at paragraph 1 for the specific day of the week.',
       correctEvidenceSentence: 'Every Monday, some students water the plants, while others remove weeds.',
+      reasoning: 'Pada paragraf 1 kalimat ketiga tertulis dengan jelas bahwa beberapa siswa menyiram tanaman setiap hari Senin: "Every Monday, some students water the plants..." (Pilihan A).',
     },
     {
       id: 'pre-q7',
@@ -1117,6 +1124,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 1,
       hint: 'Look at the second part of the third sentence in paragraph 1.',
       correctEvidenceSentence: '...while others remove weeds.',
+      reasoning: 'Paragraf 1 menyatakan bahwa sebagian siswa bertugas mencabut gulma atau rumput liar pengganggu agar tanaman dapat tumbuh sehat: "...while others remove weeds" (Pilihan C).',
     },
     {
       id: 'pre-q8',
@@ -1133,6 +1141,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Look at paragraph 2 to see what the science teacher asks students to observe.',
       correctEvidenceSentence: 'Sometimes, the science teacher asks students to observe how plants grow.',
+      reasoning: 'Di paragraf 2 tertulis bahwa guru sains mengajak siswa mengamati bagaimana tanaman bertumbuh: "Sometimes, the science teacher asks students to observe how plants grow" (Pilihan B).',
     },
     {
       id: 'pre-q9',
@@ -1149,6 +1158,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Look at the last sentence of paragraph 2.',
       correctEvidenceSentence: 'The vegetables from the garden are sometimes used in the school cooking activity.',
+      reasoning: 'Di akhir paragraf 2 disebutkan bahwa sayur-sayuran dari kebun terkadang dimanfaatkan dalam kegiatan memasak di sekolah: "The vegetables from the garden are sometimes used in the school cooking activity" (Pilihan C).',
     },
     {
       id: 'pre-q10',
@@ -1165,6 +1175,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 1,
       hint: 'Look at the second sentence of paragraph 1.',
       correctEvidenceSentence: 'Students and teachers work together to take care of it.',
+      reasoning: 'Teks menyatakan secara langsung di kalimat kedua bahwa yang bekerja sama merawat kebun adalah siswa dan guru: "Students and teachers work together to take care of it" (Pilihan A).',
     },
     // Inference (11-16)
     {
@@ -1182,6 +1193,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Think about why gardening helps students learn about nature and plants through real practice.',
       correctEvidenceSentence: 'Students also learn about plants and nature there.',
+      reasoning: 'Dari kegiatan menyiram, mencabut rumput liar, dan mengamati tanaman, kita dapat menyimpulkan bahwa siswa bekerja di kebun agar mereka dapat belajar langsung melalui aktivitas praktik yang nyata (Pilihan B).',
     },
     {
       id: 'pre-q12',
@@ -1198,6 +1210,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Notice that students observe plants and learn science lessons in the garden.',
       correctEvidenceSentence: 'The garden is not only beautiful. Students also learn about plants and nature there.',
+      reasoning: 'Kebun sekolah bukan sekadar hiasan pemandangan, tetapi memiliki nilai edukasi yang nyata (educational value) karena guru memanfaatkannya untuk pembelajaran alam dan sains siswa (Pilihan B).',
     },
     {
       id: 'pre-q13',
@@ -1214,6 +1227,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 1,
       hint: 'Plants need water and weeding. What happens if nobody takes care of them?',
       correctEvidenceSentence: 'Every Monday, some students water the plants, while others remove weeds.',
+      reasoning: 'Tanaman memerlukan air dan bebas dari gulma liar untuk bertumbuh. Jika siswa berhenti merawatnya, tanaman tersebut kemungkinan tidak akan tumbuh dengan baik (The plants may not grow well) (Pilihan A).',
     },
     {
       id: 'pre-q14',
@@ -1230,6 +1244,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'In a science class, why would a teacher want students to watch plants grow over time?',
       correctEvidenceSentence: 'Sometimes, the science teacher asks students to observe how plants grow.',
+      reasoning: 'Tujuan guru sains meminta siswa melakukan pengamatan adalah untuk membantu siswa memahami secara langsung proses bagaimana tanaman tumbuh (To help students understand plant growth) (Pilihan A).',
     },
     {
       id: 'pre-q15',
@@ -1246,6 +1261,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Cooking with vegetables grown in the garden shows that the harvest is useful and edible.',
       correctEvidenceSentence: 'The vegetables from the garden are sometimes used in the school cooking activity.',
+      reasoning: 'Digunakannya sayuran hasil kebun dalam kegiatan memasak sekolah menunjukkan bahwa kebun tersebut mampu menghasilkan bahan makanan yang berguna dan dapat dikonsumsi (The garden can provide useful food) (Pilihan A).',
     },
     {
       id: 'pre-q16',
@@ -1262,6 +1278,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Students participate in gardening, observation, and cooking activities.',
       correctEvidenceSentence: 'Students and teachers work together... Students also learn about plants and nature there.',
+      reasoning: 'Melalui kegiatan berkebun, mengamati tanaman, dan memasak, terbukti bahwa siswa di sekolah ini didorong untuk belajar aktif melalui berbagai kegiatan langsung (They are encouraged to learn through activities) (Pilihan A).',
     },
     // Vocabulary in Context (17-20)
     {
@@ -1279,6 +1296,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 1,
       hint: 'Look at what students remove from the soil so crops can grow without competition.',
       correctEvidenceSentence: '...while others remove weeds.',
+      reasoning: 'Kata "weeds" dalam paragraf 1 berarti gulma atau rumput liar pengganggu yang tidak diinginkan dan harus dicabut agar tanaman utama bisa tumbuh subur: unwanted plants (Pilihan A).',
     },
     {
       id: 'pre-q18',
@@ -1295,6 +1313,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Look at the action: observing how plants grow with your eyes over time.',
       correctEvidenceSentence: 'Sometimes, the science teacher asks students to observe how plants grow.',
+      reasoning: 'Kata "observe" di paragraf 2 memiliki arti mengamati atau memperhatikan sesuatu dengan sangat cermat dan teliti untuk mempelajari fakta: carefully watch (Pilihan A).',
     },
     {
       id: 'pre-q19',
@@ -1311,6 +1330,7 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'Flowers and green trees make the garden attractive and pleasing to look at.',
       correctEvidenceSentence: 'The garden is not only beautiful. Students also learn about plants and nature there.',
+      reasoning: 'Kata "beautiful" bermakna indah, sedap dipandang, atau menarik secara visual: attractive (Pilihan B).',
     },
     {
       id: 'pre-q20',
@@ -1327,402 +1347,85 @@ export const PRE_TEST_PASSAGE: TreatmentSession = {
       targetParagraph: 2,
       hint: 'As plants develop from young seedlings over time, they become bigger.',
       correctEvidenceSentence: 'Sometimes, the science teacher asks students to observe how plants grow.',
+      reasoning: 'Kata "grow" dalam pertumbuhan tanaman berarti berkembang dari benih kecil menjadi bertambah besar ukurannya: become bigger (Pilihan A).',
     },
   ],
 };
 
 // ==========================================
-// 3. POST-TEST — 20 ITEMS
-// Text 1 — Saving Water at School
+// 2. AYO BERLATIH — 10 ITEMS (Sesi 1 Reinstated as Ayo Berlatih)
+// Text: The School Garden (Oak Tree Elementary)
+// ==========================================
+export const AYO_BERLATIH_PASSAGE: TreatmentSession = {
+  ...TREATMENT_SESSIONS[0],
+  category: 'treatment',
+  sessionNumber: 1,
+  id: 'AYO-BERLATIH-01',
+  title: 'Ayo Berlatih: The School Garden',
+  theme: 'Lingkungan Sekolah',
+  focus: 'Latihan Membaca: 10 Soal (Main Idea, Specific Information, Inference, Vocabulary)',
+  instruction: 'Read each text carefully and choose the best answer.',
+  textType: 'Ayo Berlatih (Sesi Latihan)',
+  estimatedMinutes: 8,
+  questions: TREATMENT_SESSIONS[0].questions.map((q) => {
+    let reasoning = q.reasoning || q.hint;
+    if (q.id === 's1-q1') {
+      reasoning = 'Teks menceritakan siswa kelas lima belajar kerja sama dan merawat tanaman melalui proyek kebun sekolah (Pilihan B).';
+    } else if (q.id === 's1-q2') {
+      reasoning = 'Paragraf 2 merangkum bagaimana siswa bekerja dalam tim dengan tugas yang berbeda-beda seperti mencabut rumput dan menyiram (Pilihan A).';
+    } else if (q.id === 's1-q3') {
+      reasoning = 'Paragraf 1 secara spesifik menyebutkan siswa berkumpul setiap Selasa sore di belakang gedung sekolah (Pilihan B).';
+    } else if (q.id === 's1-q4') {
+      reasoning = 'Paragraf 3 menyatakan sayuran yang pertama kali dipanen adalah lobak merah renyah dan bayam hijau (crisp red radishes and green spinach) (Pilihan B).';
+    } else if (q.id === 's1-q5') {
+      reasoning = 'Tempat kompos dibuat untuk mengubah daun kering dan kulit buah menjadi tanah yang subur (Pilihan B).';
+    } else if (q.id === 's1-q6') {
+      reasoning = 'Guru sains memulai proyek ini agar siswa dapat belajar sains melalui pengamatan langsung tanaman nyata (Pilihan B).';
+    } else if (q.id === 's1-q7') {
+      reasoning = 'Siswa merasa sangat bangga (great pride) bahwa hasil kerja keras mereka dapat dinikmati bersama di kantin sekolah (Pilihan A).';
+    } else if (q.id === 's1-q8') {
+      reasoning = 'Gulma liar yang berbahaya (harmful weeds) akan merebut air dan nutrisi dari tanaman muda jika tidak dicabut (Pilihan B).';
+    } else if (q.id === 's1-q9') {
+      reasoning = 'Kata "observation" berarti mengamati dan memperhatikan sesuatu dengan cermat menggunakan mata sendiri: watching and noticing things carefully (Pilihan B).';
+    } else if (q.id === 's1-q10') {
+      reasoning = 'Kata "harvested" berarti memetik atau mengumpulkan hasil sayuran yang sudah matang dari kebun: gathered and picked ripe vegetables (Pilihan B).';
+    }
+    return {
+      ...q,
+      reasoning,
+    };
+  }),
+};
+
+// ==========================================
+// 3. POST-TEST — 20 ITEMS (Identical text and questions as Pre-Test for research comparability)
+// Text 1 — The School Garden
 // ==========================================
 export const POST_TEST_PASSAGE: TreatmentSession = {
   category: 'post-test',
   id: 'POST-TEST-01',
-  title: 'Saving Water at School (Post-Test)',
-  theme: 'Water Conservation & Environment',
+  title: 'The School Garden (Post-Test)',
+  theme: 'School Garden & Nature',
   focus: 'Post-Test: 20 Items (Main Idea, Specific Information, Inference, Vocabulary in Context)',
   instruction: 'Read each text carefully and choose the best answer.',
   textType: 'Post-Test Assessment',
   estimatedMinutes: 10,
-  wordCount: 92,
-  paragraphs: [
-    {
-      number: 1,
-      text: 'Water is very important for everyone. At Green Valley Elementary School, students are encouraged to save water every day. They close the taps carefully after washing their hands and use only enough water when cleaning the classroom.',
-    },
-    {
-      number: 2,
-      text: 'The school also has a rainwater collection system. When it rains, water is collected in large containers. The school uses this water to water plants and clean some outdoor areas.',
-    },
-    {
-      number: 3,
-      text: 'Teachers often remind students that small actions can make a difference. By using water carefully, students can help protect an important natural resource.',
-    },
-  ],
-  vocabularyList: [
-    {
-      word: 'encouraged',
-      paragraph: 1,
-      meaning: 'supported, guided, or urged to do something good.',
-      example: 'Students are encouraged to save water every day at school.',
-      indonesianTranslation: 'didorong / dimotivasi / dianjurkan',
-    },
-    {
-      word: 'collected',
-      paragraph: 2,
-      meaning: 'gathered together and stored in one place.',
-      example: 'Rainwater is collected in large storage containers.',
-      indonesianTranslation: 'dikumpulkan / ditampung',
-    },
-    {
-      word: 'resource',
-      paragraph: 3,
-      meaning: 'a useful natural supply or material that people need.',
-      example: 'Clean fresh water is a precious natural resource.',
-      indonesianTranslation: 'sumber daya alam yang berharga',
-    },
-    {
-      word: 'carefully',
-      paragraph: 1,
-      meaning: 'with attention and caution so as not to cause waste or harm.',
-      example: 'Students close taps carefully after washing their hands.',
-      indonesianTranslation: 'dengan hati-hati / cermat dan teliti',
-    },
-  ],
-  questions: [
-    // Main Idea (1-4)
-    {
-      id: 'post-q1',
-      questionNumber: 1,
-      skill: 'Main Idea',
-      questionText: 'What is the main idea of the text?',
-      options: [
-        { key: 'A', text: 'Students like rainy days.' },
-        { key: 'B', text: 'The school teaches students to use water wisely.' },
-        { key: 'C', text: 'Students clean the classroom every morning.' },
-        { key: 'D', text: 'The school has many large containers.' },
-      ],
-      correctKey: 'B',
-      targetParagraph: 1,
-      hint: 'Think about what the whole passage teaches about using water wisely and saving it every day.',
-      correctEvidenceSentence: 'At Green Valley Elementary School, students are encouraged to save water every day.',
-    },
-    {
-      id: 'post-q2',
-      questionNumber: 2,
-      skill: 'Main Idea',
-      questionText: 'What is the text mainly about?',
-      options: [
-        { key: 'A', text: 'Rainy weather' },
-        { key: 'B', text: 'Cleaning classrooms' },
-        { key: 'C', text: 'Water conservation at school' },
-        { key: 'D', text: 'Growing plants' },
-      ],
-      correctKey: 'C',
-      targetParagraph: 1,
-      hint: 'Look at the overall topic across all three paragraphs: saving water and water conservation.',
-      correctEvidenceSentence: '...students are encouraged to save water every day... By using water carefully, students can help protect an important natural resource.',
-    },
-    {
-      id: 'post-q3',
-      questionNumber: 3,
-      skill: 'Main Idea',
-      questionText: 'Why does the school collect rainwater?',
-      options: [
-        { key: 'A', text: 'To drink it during lunch' },
-        { key: 'B', text: 'To use it for plants and outdoor cleaning' },
-        { key: 'C', text: 'To fill the swimming pool' },
-        { key: 'D', text: "To wash students' clothes" },
-      ],
-      correctKey: 'B',
-      targetParagraph: 2,
-      hint: 'Check the last sentence of paragraph 2 for how collected rainwater is utilized.',
-      correctEvidenceSentence: 'The school uses this water to water plants and clean some outdoor areas.',
-    },
-    {
-      id: 'post-q4',
-      questionNumber: 4,
-      skill: 'Main Idea',
-      questionText: 'Which statement best summarizes the text?',
-      options: [
-        { key: 'A', text: 'Students should avoid using water.' },
-        { key: 'B', text: 'Students learn practical ways to save water.' },
-        { key: 'C', text: 'Rainwater is better than all other water.' },
-        { key: 'D', text: "Cleaning is the school's most important activity." },
-      ],
-      correctKey: 'B',
-      targetParagraph: 3,
-      hint: 'Which statement summarizes closing taps, rainwater collection, and daily habits to protect water?',
-      correctEvidenceSentence: 'By using water carefully, students can help protect an important natural resource.',
-    },
-    // Specific Information (5-10)
-    {
-      id: 'post-q5',
-      questionNumber: 5,
-      skill: 'Specific Information',
-      questionText: 'What do students close after washing their hands?',
-      options: [
-        { key: 'A', text: 'Windows' },
-        { key: 'B', text: 'Doors' },
-        { key: 'C', text: 'Taps' },
-        { key: 'D', text: 'Containers' },
-      ],
-      correctKey: 'C',
-      targetParagraph: 1,
-      hint: 'Look at the third sentence of paragraph 1.',
-      correctEvidenceSentence: 'They close the taps carefully after washing their hands...',
-    },
-    {
-      id: 'post-q6',
-      questionNumber: 6,
-      skill: 'Specific Information',
-      questionText: 'When is rainwater collected?',
-      options: [
-        { key: 'A', text: 'When it is sunny' },
-        { key: 'B', text: 'When it rains' },
-        { key: 'C', text: 'Every morning' },
-        { key: 'D', text: 'Every Monday' },
-      ],
-      correctKey: 'B',
-      targetParagraph: 2,
-      hint: 'Check the second sentence of paragraph 2.',
-      correctEvidenceSentence: 'When it rains, water is collected in large containers.',
-    },
-    {
-      id: 'post-q7',
-      questionNumber: 7,
-      skill: 'Specific Information',
-      questionText: 'Where is rainwater collected?',
-      options: [
-        { key: 'A', text: 'In large containers' },
-        { key: 'B', text: 'In classrooms' },
-        { key: 'C', text: 'In the library' },
-        { key: 'D', text: 'In small bottles' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 2,
-      hint: 'Look at the containers mentioned in paragraph 2.',
-      correctEvidenceSentence: '...water is collected in large containers.',
-    },
-    {
-      id: 'post-q8',
-      questionNumber: 8,
-      skill: 'Specific Information',
-      questionText: 'What is the collected rainwater used for?',
-      options: [
-        { key: 'A', text: 'Cooking lunch' },
-        { key: 'B', text: 'Drinking' },
-        { key: 'C', text: 'Watering plants and cleaning outdoor areas' },
-        { key: 'D', text: 'Washing school uniforms' },
-      ],
-      correctKey: 'C',
-      targetParagraph: 2,
-      hint: 'Read the last sentence in paragraph 2.',
-      correctEvidenceSentence: 'The school uses this water to water plants and clean some outdoor areas.',
-    },
-    {
-      id: 'post-q9',
-      questionNumber: 9,
-      skill: 'Specific Information',
-      questionText: 'Who reminds students to use water carefully?',
-      options: [
-        { key: 'A', text: 'Parents' },
-        { key: 'B', text: 'Teachers' },
-        { key: 'C', text: 'Cooks' },
-        { key: 'D', text: 'Gardeners' },
-      ],
-      correctKey: 'B',
-      targetParagraph: 3,
-      hint: 'Look at the first sentence of paragraph 3.',
-      correctEvidenceSentence: 'Teachers often remind students that small actions can make a difference.',
-    },
-    {
-      id: 'post-q10',
-      questionNumber: 10,
-      skill: 'Specific Information',
-      questionText: 'What does the school want students to do?',
-      options: [
-        { key: 'A', text: 'Use as much water as possible.' },
-        { key: 'B', text: 'Use water carefully.' },
-        { key: 'C', text: 'Stop cleaning the school.' },
-        { key: 'D', text: 'Collect all rainwater at home.' },
-      ],
-      correctKey: 'B',
-      targetParagraph: 1,
-      hint: 'Look at paragraph 1 and paragraph 3 for how students are encouraged to use water.',
-      correctEvidenceSentence: '...students are encouraged to save water every day. By using water carefully, students can help protect an important natural resource.',
-    },
-    // Inference (11-16)
-    {
-      id: 'post-q11',
-      questionNumber: 11,
-      skill: 'Inference',
-      questionText: 'Why does the school teach students to save water?',
-      options: [
-        { key: 'A', text: 'Water is an important resource.' },
-        { key: 'B', text: 'Students do not like water.' },
-        { key: 'C', text: 'The school has no taps.' },
-        { key: 'D', text: 'Rain never falls there.' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 3,
-      hint: 'Think about why water is called an important natural resource that needs protection.',
-      correctEvidenceSentence: 'By using water carefully, students can help protect an important natural resource.',
-    },
-    {
-      id: 'post-q12',
-      questionNumber: 12,
-      skill: 'Inference',
-      questionText: 'What can we infer about the school’s rainwater system?',
-      options: [
-        { key: 'A', text: 'It helps the school use water efficiently.' },
-        { key: 'B', text: 'It is only for decoration.' },
-        { key: 'C', text: 'It makes the school use more water.' },
-        { key: 'D', text: 'It is used only during science lessons.' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 2,
-      hint: 'Reusing rainwater for watering plants and cleaning saves clean drinking water, making usage efficient.',
-      correctEvidenceSentence: 'The school also has a rainwater collection system... The school uses this water to water plants and clean some outdoor areas.',
-    },
-    {
-      id: 'post-q13',
-      questionNumber: 13,
-      skill: 'Inference',
-      questionText: 'What may happen if students leave taps open?',
-      options: [
-        { key: 'A', text: 'More water may be wasted.' },
-        { key: 'B', text: 'The school will get more rain.' },
-        { key: 'C', text: 'Plants will grow faster.' },
-        { key: 'D', text: 'Containers will become smaller.' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 1,
-      hint: 'If taps are left open, water continues flowing without being used, leading to waste.',
-      correctEvidenceSentence: 'They close the taps carefully after washing their hands...',
-    },
-    {
-      id: 'post-q14',
-      questionNumber: 14,
-      skill: 'Inference',
-      questionText: 'Why does the teacher say that small actions can make a difference?',
-      options: [
-        { key: 'A', text: 'Simple habits can help save water.' },
-        { key: 'B', text: 'Students need to build a new school.' },
-        { key: 'C', text: 'Teachers want students to collect containers.' },
-        { key: 'D', text: 'Rainwater is difficult to find.' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 3,
-      hint: 'Turning off taps and using only what is needed are small individual habits that together save large amounts of water.',
-      correctEvidenceSentence: 'Teachers often remind students that small actions can make a difference.',
-    },
-    {
-      id: 'post-q15',
-      questionNumber: 15,
-      skill: 'Inference',
-      questionText: 'What can we infer about the students at Green Valley Elementary School?',
-      options: [
-        { key: 'A', text: 'They are learning environmental responsibility.' },
-        { key: 'B', text: 'They never clean their classrooms.' },
-        { key: 'C', text: 'They only study about rain.' },
-        { key: 'D', text: 'They do not use water.' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 3,
-      hint: 'Protecting natural resources teaches students to be responsible toward the environment.',
-      correctEvidenceSentence: 'By using water carefully, students can help protect an important natural resource.',
-    },
-    {
-      id: 'post-q16',
-      questionNumber: 16,
-      skill: 'Inference',
-      questionText: 'If there is no rain for a long time, what might happen?',
-      options: [
-        { key: 'A', text: 'The school may have less collected rainwater.' },
-        { key: 'B', text: 'The containers will produce water.' },
-        { key: 'C', text: 'Students will have more rainwater.' },
-        { key: 'D', text: 'Plants will automatically get more water.' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 2,
-      hint: 'The collection system depends on rainfall. Without rain, the containers cannot collect water.',
-      correctEvidenceSentence: 'When it rains, water is collected in large containers.',
-    },
-    // Vocabulary in Context (17-20)
-    {
-      id: 'post-q17',
-      questionNumber: 17,
-      skill: 'Vocabulary in Context',
-      questionText: 'The word “encouraged” in paragraph 1 is closest in meaning to...',
-      options: [
-        { key: 'A', text: 'asked or supported' },
-        { key: 'B', text: 'punished' },
-        { key: 'C', text: 'prevented' },
-        { key: 'D', text: 'ignored' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 1,
-      hint: 'Teachers support and ask students to build good water-saving habits.',
-      correctEvidenceSentence: 'At Green Valley Elementary School, students are encouraged to save water every day.',
-    },
-    {
-      id: 'post-q18',
-      questionNumber: 18,
-      skill: 'Vocabulary in Context',
-      questionText: 'The word “collected” in paragraph 2 means...',
-      options: [
-        { key: 'A', text: 'gathered' },
-        { key: 'B', text: 'thrown away' },
-        { key: 'C', text: 'lost' },
-        { key: 'D', text: 'heated' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 2,
-      hint: 'Rainwater is gathered and stored in large containers.',
-      correctEvidenceSentence: 'When it rains, water is collected in large containers.',
-    },
-    {
-      id: 'post-q19',
-      questionNumber: 19,
-      skill: 'Vocabulary in Context',
-      questionText: 'The word “resource” in the last paragraph refers to...',
-      options: [
-        { key: 'A', text: 'something useful that people need' },
-        { key: 'B', text: 'a school building' },
-        { key: 'C', text: 'a classroom activity' },
-        { key: 'D', text: 'a type of container' },
-      ],
-      correctKey: 'A',
-      targetParagraph: 3,
-      hint: 'Natural resources like water are valuable supplies that humans and nature need.',
-      correctEvidenceSentence: 'By using water carefully, students can help protect an important natural resource.',
-    },
-    {
-      id: 'post-q20',
-      questionNumber: 20,
-      skill: 'Vocabulary in Context',
-      questionText: 'The word “carefully” in paragraph 1 means...',
-      options: [
-        { key: 'A', text: 'without thinking' },
-        { key: 'B', text: 'with attention' },
-        { key: 'C', text: 'very quickly' },
-        { key: 'D', text: 'very loudly' },
-      ],
-      correctKey: 'B',
-      targetParagraph: 1,
-      hint: 'Closing taps carefully means doing it with attention so water stops dripping.',
-      correctEvidenceSentence: 'They close the taps carefully after washing their hands...',
-    },
-  ],
+  wordCount: 88,
+  paragraphs: PRE_TEST_PASSAGE.paragraphs,
+  vocabularyList: PRE_TEST_PASSAGE.vocabularyList,
+  questions: PRE_TEST_PASSAGE.questions.map((q) => ({
+    ...q,
+    id: q.id.replace('pre-', 'post-'),
+  })),
 };
 
-// Complete research activity list: Pre-Test -> 4 Treatment Sessions -> Post-Test
+// Research activity sequence: Pre-Test -> Ayo Berlatih -> Post-Test
 export const ALL_RESEARCH_ACTIVITIES: TreatmentSession[] = [
-  PRE_TEST_PASSAGE,
-  ...TREATMENT_SESSIONS,
-  POST_TEST_PASSAGE,
+  PRE_TEST_PASSAGE,      // Index 0: Pre-Test (20 items)
+  AYO_BERLATIH_PASSAGE,   // Index 1: Ayo Berlatih (10 items)
+  POST_TEST_PASSAGE,     // Index 2: Post-Test (20 items)
 ];
 
 export const GRADE_5_PASSAGES = ALL_RESEARCH_ACTIVITIES;
+
 

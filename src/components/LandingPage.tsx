@@ -32,8 +32,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   const [studentName, setStudentName] = useState('');
   const [attendanceCode, setAttendanceCode] = useState('');
   const [studentSchool, setStudentSchool] = useState('');
-  const [selectedGrade, setSelectedGrade] = useState('Grade 5-A');
-  const [selectedActivity, setSelectedActivity] = useState('PRE-TEST-01');
+  const [studentGrade, setStudentGrade] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [showTeacherLogin, setShowTeacherLogin] = useState(false);
 
@@ -56,14 +55,18 @@ export const LandingPage: React.FC<LandingPageProps> = ({
       setErrorMessage('Harap isi Asal Sekolah.');
       return;
     }
+    if (!studentGrade.trim()) {
+      setErrorMessage('Harap isi Kelas.');
+      return;
+    }
 
     setErrorMessage('');
     onStartStudentReading(
       studentName.trim(),
       attendanceCode.trim(),
       studentSchool.trim(),
-      selectedGrade,
-      selectedActivity
+      studentGrade.trim(),
+      'PRE-TEST-01'
     );
   };
 
@@ -214,42 +217,39 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 />
               </div>
 
-              {/* Field 4: Kelas / Grade */}
+              {/* Field 4: Kelas / Grade (Custom text input) */}
               <div>
-                <label className="block text-[11px] font-semibold text-slate-300 mb-1">
-                  Kelas
+                <label className="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center gap-1">
+                  <GraduationCap className="w-3.5 h-3.5 text-cyan-400" />
+                  <span>Kelas <span className="text-cyan-400">*</span></span>
                 </label>
-                <select
-                  value={selectedGrade}
-                  onChange={(e) => setSelectedGrade(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-xs font-semibold focus:outline-none focus:border-cyan-400 cursor-pointer"
-                >
-                  <option value="Grade 5-A">Grade 5-A</option>
-                  <option value="Grade 5-B">Grade 5-B</option>
-                  <option value="Grade 5-C">Grade 5-C</option>
-                  <option value="VIII-A">VIII-A</option>
-                  <option value="VIII-B">VIII-B</option>
-                </select>
+                <input
+                  type="text"
+                  required
+                  value={studentGrade}
+                  onChange={(e) => setStudentGrade(e.target.value)}
+                  placeholder="misal: 5-A, Kelas 5B..."
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/80 border border-slate-700 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white placeholder-slate-500 text-xs sm:text-sm font-semibold transition-colors outline-none"
+                />
               </div>
 
-              {/* Field 5: Sesi / Instrumen Aktivitas */}
+              {/* Field 5: Alur Aktivitas Riset */}
               <div>
                 <label className="block text-[11px] font-semibold text-slate-300 mb-1 flex items-center justify-between">
-                  <span>Pilihan Sesi / Instrumen</span>
-                  <span className="text-[10px] text-cyan-300 font-bold">Riset AI-READ</span>
+                  <span>Alur Aktivitas</span>
+                  <span className="text-[10px] text-cyan-300 font-bold">Wajib Berurutan</span>
                 </label>
-                <select
-                  value={selectedActivity}
-                  onChange={(e) => setSelectedActivity(e.target.value)}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-800/80 border border-slate-700 text-white text-xs font-semibold focus:outline-none focus:border-cyan-400 cursor-pointer"
-                >
-                  <option value="PRE-TEST-01">📝 PRE-TEST (20 Soal) — The School Garden</option>
-                  <option value="SESSION-01">🌟 Sesi 1 AI-READ (10 Soal) — The School Garden</option>
-                  <option value="SESSION-02">🌟 Sesi 2 AI-READ (10 Soal) — A Smart Way to Save Water</option>
-                  <option value="SESSION-03">🌟 Sesi 3 AI-READ (10 Soal) — Learning with Digital Books</option>
-                  <option value="SESSION-04">🌟 Sesi 4 AI-READ (10 Soal) — The Amazing World of Mangroves</option>
-                  <option value="POST-TEST-01">🎓 POST-TEST (20 Soal) — Saving Water at School</option>
-                </select>
+                <div className="p-3 rounded-xl bg-slate-800/80 border border-slate-700 text-xs text-slate-200 space-y-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold">
+                      Tahap 1
+                    </span>
+                    <span className="font-bold text-white">📝 PRE-TEST (20 Soal)</span>
+                  </div>
+                  <p className="text-[10px] text-slate-400 leading-snug">
+                    Urutan wajib sistematis: <strong>1. Pre-Test</strong> ➔ <strong>2. Ayo Berlatih</strong> ➔ <strong>3. Post-Test</strong>.
+                  </p>
+                </div>
               </div>
 
               {/* Start Reading Activity Button */}
@@ -260,17 +260,6 @@ export const LandingPage: React.FC<LandingPageProps> = ({
                 <span>Mulai Aktivitas Membaca</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
               </button>
-
-              {/* Teacher Portal Switch */}
-              <div className="pt-2.5 border-t border-white/10 text-center">
-                <button
-                  type="button"
-                  onClick={() => setShowTeacherLogin(true)}
-                  className="text-[11px] text-slate-400 hover:text-cyan-300 transition-colors cursor-pointer hover:underline"
-                >
-                  Bapak/Ibu Guru &amp; Peneliti? Masuk Dashboard Analitik
-                </button>
-              </div>
             </form>
           ) : (
             /* Teacher Portal Fallback Form */
