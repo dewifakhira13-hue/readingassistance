@@ -1,0 +1,6 @@
+{
+  "name": "I-CLARITY II — AI-Powered English Reading Teacher Dashboard",
+  "description": "AI-Powered Teacher Dashboard for Data-Informed English Pedagogy: Integrating Academic, Engagement, and Affective Learning Indicators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
