@@ -35,10 +35,10 @@ interface StudentReadingActivityProps {
 }
 
 export const StudentReadingActivity: React.FC<StudentReadingActivityProps> = ({
-  studentName = 'Aisyah Putri',
-  attendanceCode = '05',
-  studentSchool = 'SD Negeri 1',
-  studentCode = 'STU-05',
+  studentName = 'Siswa',
+  attendanceCode = '-',
+  studentSchool = 'Sekolah',
+  studentCode = '',
   studentGrade,
   initialPassageId,
   onExit,

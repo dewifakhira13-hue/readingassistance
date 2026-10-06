@@ -29,9 +29,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   onEnterTeacherDashboard,
 }) => {
   // Student form state
-  const [studentName, setStudentName] = useState('Aisyah Putri');
-  const [attendanceCode, setAttendanceCode] = useState('05');
-  const [studentSchool, setStudentSchool] = useState('SD Negeri 1');
+  const [studentName, setStudentName] = useState('');
+  const [attendanceCode, setAttendanceCode] = useState('');
+  const [studentSchool, setStudentSchool] = useState('');
   const [selectedGrade, setSelectedGrade] = useState('Grade 5-A');
   const [selectedActivity, setSelectedActivity] = useState('PRE-TEST-01');
   const [errorMessage, setErrorMessage] = useState('');
